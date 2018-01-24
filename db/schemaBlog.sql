@@ -1,0 +1,13 @@
+DROP DATABASE IF EXISTS blog_db;
+CREATE DATABASE blog_db;
+
+USE blog_db;
+
+CREATE TABLE blog_db
+(
+id INT NOT NULL AUTO_INCREMENT,
+username VARCHAR(255) NOT NULL,
+brewery VARCHAR(255),
+comments VARCHAR(1000),
+PRIMARY KEY(id)
+);
