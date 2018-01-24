@@ -14,8 +14,6 @@ app.get("/:user/:pass", function(req, res) {
 	console.log(req.params)
 	in_pass = req.params.pass
 	in_user = req.params.user
-	console.log(in_pass)
-	console.log(in_user)
 	// var result = [in_user,in_pass]
 	// res.send(result.toString());
 
