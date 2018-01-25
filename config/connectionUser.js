@@ -1,12 +1,12 @@
 // Set up MySQL connection.
 var mysql = require("mysql");
 
-var connectionBlog = mysql.createConnection({
+var connectionUser = mysql.createConnection({
   port: 3306,
   host: "localhost",
   user: "root",
   password: "",
-  database: "blog_db"
+  database: "user_info"
 });
 
 // Make connection.
@@ -19,4 +19,4 @@ connection.connect(function(err) {
 });
 
 // Export connection for our ORM to use.
-module.exports = connectionBlog;
+module.exports = connectionUser;
