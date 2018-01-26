@@ -1,7 +1,14 @@
+body {
+  background-image: url("https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX18195501.jpg");
+}
+
 nav ul a,
 nav .brand-logo {
   color: #ffa726;
 }
+#bar-theme {
+  color: #ffa726 !important;
+} 
 
 nav {
   color: #fff;
@@ -336,3 +343,4 @@ input {
 .addBtn:hover {
   background-color: #bbb;
 }
+
