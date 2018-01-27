@@ -6,32 +6,26 @@ var CryptoJS = require("crypto-js");
 var mysql = require("mysql");
 var app = express();
 var PORT = 3002;
+var encryption_key = process.argv[2].toString(CryptoJS.enc.Utf8)+" "+process.argv[3].toString(CryptoJS.enc.Utf8)+" "+process.argv[4].toString(CryptoJS.enc.Utf8)+" "+process.argv[5].toString(CryptoJS.enc.Utf8)+" "+process.argv[6].toString(CryptoJS.enc.Utf8)+" "+process.argv[7].toString(CryptoJS.enc.Utf8)+" "+process.argv[8].toString(CryptoJS.enc.Utf8)+" "+process.argv[9].toString(CryptoJS.enc.Utf8)+" "+process.argv[10].toString(CryptoJS.enc.Utf8)+" "+process.argv[11].toString(CryptoJS.enc.Utf8)+" "+process.argv[12].toString(CryptoJS.enc.Utf8)
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-
-var in_pass = ""
-var in_user = ""
-var method = ""
 app.get("/:method/:user/:pass", function(req, res) {
-	method = req.params.method
-	in_pass = req.params.pass
-	in_user = req.params.user
-	if(method=="login"){
-		login(in_user,in_pass)
+	if(req.params.method=="login"){
+		res.send(login(req.params.user,req.params.pass))
 	}
-	if(method=="new_user"){
-		new_user(in_user,in_pass)
+	if(req.params.method=="new_user"){
+		res.send(new_user(req.params.user,req.params.pass))
 	}
 })
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
-function encrypt(in_pass){
-	return(CryptoJS.AES.encrypt(in_pass, 'ceaser cypher, but not actualy. this is just a long key'))
+function encrypt(in_pass,in_user){
+	return(CryptoJS.AES.encrypt(in_pass, encryption_key+in_user))
 }
-function decrypt(out_pass){
-	var de_pass  = CryptoJS.AES.decrypt(out_pass.toString(), 'ceaser cypher, but not actualy. this is just a long key');
+function decrypt(out_pass,in_user){
+	var de_pass  = CryptoJS.AES.decrypt(out_pass.toString(), encryption_key+in_user);
 	return(de_pass.toString(CryptoJS.enc.Utf8))
 }
 function connect(method){
@@ -51,7 +45,7 @@ function connect(method){
 	connection.query("SELECT * FROM login_db", function(err,res){
 		if(err){throw err}
 		//TODO --------------------- use return() to return username/password info for use by other functions
-		return()
+		//return()
 	})
 
 	connection.end()
@@ -62,7 +56,10 @@ function new_user(user_name,password){
 	//TODO -----CONNECT TO login_db to see if username is available
 	if(user_name_available){
 		// return info that username is available and the encrypted password to be stored in database
-		res.send([true,encrypt(password)])
+		return([true,encrypt(password,user_name)])
+	}
+	else{
+		return(false)
 	}
 }
 function login(user_name,password){
@@ -73,10 +70,10 @@ function login(user_name,password){
 	if(user_name_inuse){
 		var encrypted_pass = ""
 		//TODO --------------CONNECT TO login_db to retrieve associated encrypted password
-		var decrypted_pass = decrypt(encrypted_pass)
+		var decrypted_pass = decrypt(encrypted_pass,user_name)
 		if(decrypted_pass === password){
 			result = true
 		}
 	}
-	res.send(true)
+	return(result)
 }
