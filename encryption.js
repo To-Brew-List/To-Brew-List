@@ -22,7 +22,7 @@ app.get("/:method/:user/:pass", function(req, res) {
 	}
 	if(method=="new_user"){
 		new_user(in_user,in_pass)
-	}
+	} 
 })
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);

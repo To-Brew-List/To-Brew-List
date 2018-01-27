@@ -10,4 +10,4 @@ CREATE TABLE user_data (
     todoList BOOL DEFAULT false,
     doneList BOOL DEFAULT false,
     PRIMARY KEY (id)
-);
+);   

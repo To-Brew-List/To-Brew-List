@@ -10,4 +10,4 @@ username VARCHAR(255) NOT NULL,
 brewery VARCHAR(255),
 comments VARCHAR(1000),
 PRIMARY KEY(id)
-);
+); 
