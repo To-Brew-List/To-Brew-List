@@ -9,7 +9,7 @@ module.exports = function(app) {
 
 	//html get request for info
 	app.get("/register", function(req, res) {
-		res.sendFile(path.join(__dirname, "../views/layouts/get-started.html"));
+		res.sendFile(path.join(__dirname, "../views/layouts/get_started.html"));
 	});
 
 	//html get request for login
@@ -21,5 +21,5 @@ module.exports = function(app) {
 	app.get("/blog", function(req, res) {
 		res.sendFile(path.join(__dirname, "../views/layouts/personal.html"));
 	});
-}
+} 
 
