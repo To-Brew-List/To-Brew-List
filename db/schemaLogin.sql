@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS user_database;
-CREATE DATABASE user_database;
-USE user_database;
+DROP DATABASE IF EXISTS login_db;
+CREATE DATABASE login_db;
+USE login_db;
 
-CREATE TABLE login (
+CREATE TABLE info (
 	id int NOT NULL AUTO_INCREMENT,
 	username varchar(255) NOT NULL,
 	password varchar(255) NOT NULL,

@@ -10,7 +10,7 @@ if (process.env.JAWSDB_URL) {
     host: "localhost",
     user: "root",
     password: "All4myFam",
-    database: "user_info"
+    database: "blog_db"
   });
 };
 
