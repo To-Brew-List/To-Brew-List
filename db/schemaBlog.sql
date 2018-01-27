@@ -3,11 +3,12 @@ CREATE DATABASE blog_db;
 
 USE blog_db;
 
-CREATE TABLE blog_db
+CREATE TABLE blog
 (
 id INT NOT NULL AUTO_INCREMENT,
-username VARCHAR(255) NOT NULL,
+user_name VARCHAR(255) NOT NULL,
 brewery VARCHAR(255),
+main_text_field VARCHAR(1000) NOT NULL,
 comments VARCHAR(1000),
 PRIMARY KEY(id)
 ); 
