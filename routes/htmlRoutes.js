@@ -9,7 +9,7 @@ module.exports = function(app) {
 
 	//html get request for info
 	app.get("/register", function(req, res) {
-		res.sendFile(path.join(__dirname, "../views/layouts/gets-tarted.html"));
+		res.sendFile(path.join(__dirname, "../views/layouts/get-started.html"));
 	});
 
 	//html get request for login
