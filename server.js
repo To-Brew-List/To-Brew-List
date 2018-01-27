@@ -7,8 +7,10 @@ var PORT = 3000;
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
+//
 require("./routes/htmlRoutes.js")(app);
+require("./routes/apiRoutes.js")(app);
+
 
 // //handlebars setup
 // var exphbs = require("express-handlebars");
