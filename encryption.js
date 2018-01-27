@@ -37,7 +37,7 @@ function connect(method) {
 		// Your username
 		user: "root",
 		// Your password
-		password: "",
+		password: "All4myFam",
 		database: "login_db"
 	});
 	// TODO ------------------- probs a bad idea to select * from a user/password database

@@ -3,13 +3,13 @@ var path = require("path");
 
 module.exports = function(app) {
 	//html get request for main
-	app.get(function(req, res) {
+	app.get("/", function(req, res) {
 		res.sendFile(path.join(__dirname, "../views/layouts/index.html"));
 	});
 
 	//html get request for info
 	app.get("/register", function(req, res) {
-		res.sendFile(path.join(__dirname, "../views/layouts/get_started.html"));
+		res.sendFile(path.join(__dirname, "../views/layouts/gets-tarted.html"));
 	});
 
 	//html get request for login
