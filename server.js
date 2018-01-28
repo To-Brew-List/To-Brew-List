@@ -15,7 +15,9 @@ require("./routes/apiRoutes.js")(app);
 
 var mysql = require("mysql");
 
-// app.use(routes);
+//routes with server access
+var routes = requier("./controllers/brewController.js");
+app.use(routes);
 
 app.listen(PORT, function () {
 	console.log("App now listening at localhost: " + PORT);

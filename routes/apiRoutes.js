@@ -4,4 +4,6 @@ var blogData = require("../data/blogData");
 
 module.exports = function(app){
 
+	//get and 
+
 };
