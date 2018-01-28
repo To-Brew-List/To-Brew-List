@@ -1,1 +1,1 @@
-var connection = require("../")
+var connection = require("../");

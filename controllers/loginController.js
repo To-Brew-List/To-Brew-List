@@ -8,3 +8,5 @@ var login = require("../models/login.js");
 router.get("/login", function(req, res) {
 	login.all()
 })
+
+module.exports = router;
