@@ -4,6 +4,6 @@ var router = express.Router();
 
 var user = require("../models/user.js");
 
-roueter.get("/register", function(req, res) {
-	user.all
+roueter.post("/register", function(req, res) {
+	user.create()
 })
