@@ -16,6 +16,7 @@ var mysql = require("mysql");
 
 //routes with server access
 var routes = require("./controllers/loginController.js");
+var routes = require("./controllers/userController.js");
 app.use(routes);
 
 app.listen(PORT, function () {
