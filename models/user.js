@@ -1,2 +1,5 @@
-var orm = require("../config/userOrm");
+var orm = require("../config/userOrm.js");
+
+
+module.exports = user;
 

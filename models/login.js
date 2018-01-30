@@ -26,4 +26,4 @@ var login = {
 };
 
 // Export the database functions for the controller (catsController.js).
-module.exports = ;
+module.exports = orm;

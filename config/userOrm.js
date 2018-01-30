@@ -1,16 +1,19 @@
-var connection = require("./connectionUser.js");
+var connection = require("../config?connectionUser.js");
 
 
 var orm = {
-	all: function(tableInput, cb) {
-    var queryString = "SELECT * FROM " + tableInput + ";";
-    connection.query(queryString, function(err, result) {
-      if (err) {
-        throw err;
-      }
-      cb(result);
-    });
+	create: function(table, cols, vals, cb) {
+	    var queryString = "INSERT INTO" + table;
+	   
+	   
 
-}
+	    connection.query(queryString, function(err, result) {
+	      if (err) {
+	        throw err;
+	      }
+	      cb(result);
+	    });
+	 }
+};
 
 module.exports = orm;
