@@ -16,7 +16,7 @@ if (typeof jQuery === 'undefined') {
   } else {
     jQuery = $;
   }
-} 
+}
 ; /*
   * jQuery Easing v1.4.0 - http://gsgd.co.uk/sandbox/jquery/easing/
   * Open source under the BSD License.
