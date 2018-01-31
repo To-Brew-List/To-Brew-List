@@ -1,6 +1,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
+var path = require("path");
 var materialize = require("materialize-css");
 
 var app = express();
@@ -12,12 +13,16 @@ app.use(bodyParser.json());
 
 app.use(methodOverride("_method"));
 
+app.use(express.static("public"));
+
 var mysql = require("mysql");
 
 //routes with server access
-var routes = require("./controllers/loginController.js");
+// var loginRoutes = require("./controllers/loginController.js");
+//app.use(loginRoutes);
+
 var routes = require("./controllers/userController.js");
-app.use(routes);
+app.use("/", routes);
 
 app.listen(PORT, function () {
 	console.log("App now listening at localhost: " + PORT);
