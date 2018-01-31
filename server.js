@@ -1,7 +1,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
-// var materialize = require("materialize-css");
+var materialize = require("materialize-css");
 
 var app = express();
 var PORT = 3000;
