@@ -1,6 +1,5 @@
-DROP DATABASE IF EXISTS user_info;
-CREATE DATABASE user_info;
-USE user_info;
+
+USE h90ncfx3ux3kkw9y;
 
 CREATE TABLE user_data (
 	id int NOT NULL AUTO_INCREMENT,

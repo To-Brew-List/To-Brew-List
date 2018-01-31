@@ -1,6 +1,5 @@
-DROP DATABASE IF EXISTS login_db;
-CREATE DATABASE login_db;
-USE login_db;
+
+USE h90ncfx3ux3kkw9y;
 
 CREATE TABLE info (
 	id int NOT NULL AUTO_INCREMENT,
