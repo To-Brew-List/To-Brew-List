@@ -1,7 +1,5 @@
-DROP DATABASE IF EXISTS blog_db;
-CREATE DATABASE blog_db;
 
-USE blog_db;
+USE h90ncfx3ux3kkw9y;
 
 CREATE TABLE blog
 (
