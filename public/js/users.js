@@ -1,27 +1,27 @@
 
-
-var  user = {};
-$("#register").on("click", function () {
-	getUserName();
-
-	$.ajax("/newUser", {
-      type: "POST",
-      data: user
-    }).then(
-      function() {
-        console.log("created new user");
-      }
-    );
-});
-
 function getUserName() {
-	
-	user.fisrtName = $("#first_name").val().trim(),
-	user.lastName = $("#last_name").val().trim(),
-	user.email = $("#email").val().trim(),
-	user.password = $("#password").val().trim()
+
+	var  newUser = {
+
+		fisrtName: $("#first_name").val().trim(),
+		lastName: $("#last_name").val().trim(),
+		email: $("#email").val().trim(),
+		password: $("#password").val().trim()
+	};
+
+	$("#register").on("click", function () {
+		getUserName();
+
+		$.ajax("/newUser", {
+	      type: "POST",
+	      data: newUser
+	    }).then(
+	      function() {
+	        console.log("created new user");
+	      }
+	    );
+	});
+
 };
 
-
-
-module.exports = user;
+module.exports = newUser;
