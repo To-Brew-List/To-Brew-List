@@ -31,7 +31,7 @@ function objToSql(ob) {
 
 var orm = {
 	create: function(table, cols, vals, cb) {
-    var queryString = "INSERT INTO " + user_data;
+    var queryString = "INSERT INTO " + table;
 
     queryString += " (";
     queryString += cols.toString();
