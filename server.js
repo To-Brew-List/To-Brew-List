@@ -17,9 +17,13 @@ app.use(express.static("public"));
 
 var mysql = require("mysql");
 
-//routes with server access
-// var loginRoutes = require("./controllers/loginController.js");
-//app.use(loginRoutes);
+// routes with server access
+
+// var blogRoutes = require9("./controllers/blogController");
+// app.use("/blog", blogRoutes);
+
+var loginRoutes = require("./controllers/loginController.js");
+app.use("/login", loginRoutes);
 
 var routes = require("./controllers/userController.js");
 app.use("/", routes);
