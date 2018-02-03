@@ -7,7 +7,16 @@ var mysql = require("mysql");
 //var materialize = require("materialize-css");
 var app = express();
 var PORT = 3002;
-var encryption_key = process.argv[2].toString(CryptoJS.enc.Utf8) + " " + process.argv[3].toString(CryptoJS.enc.Utf8) + " " + process.argv[4].toString(CryptoJS.enc.Utf8) + " " + process.argv[5].toString(CryptoJS.enc.Utf8) + " " + process.argv[6].toString(CryptoJS.enc.Utf8) + " " + process.argv[7].toString(CryptoJS.enc.Utf8) + " " + process.argv[8].toString(CryptoJS.enc.Utf8) + " " + process.argv[9].toString(CryptoJS.enc.Utf8) + " " + process.argv[10].toString(CryptoJS.enc.Utf8) + " " + process.argv[11].toString(CryptoJS.enc.Utf8) + " " + process.argv[12].toString(CryptoJS.enc.Utf8)
+//var encryption_key = process.argv[2].toString(CryptoJS.enc.Utf8) + " " + process.argv[3].toString(CryptoJS.enc.Utf8) + " " + process.argv[4].toString(CryptoJS.enc.Utf8) + " " + process.argv[5].toString(CryptoJS.enc.Utf8) + " " + process.argv[6].toString(CryptoJS.enc.Utf8) + " " + process.argv[7].toString(CryptoJS.enc.Utf8) + " " + process.argv[8].toString(CryptoJS.enc.Utf8) + " " + process.argv[9].toString(CryptoJS.enc.Utf8) + " " + process.argv[10].toString(CryptoJS.enc.Utf8) + " " + process.argv[11].toString(CryptoJS.enc.Utf8) + " " + process.argv[12].toString(CryptoJS.enc.Utf8)
+var encryption_key = ""
+
+$.ajax({
+	url: "GET /apps/radiant-stream-49957/config-vars",
+	method: "GET"
+	}).done(function(config_vars) {
+		encryption_key = config_vars[encryption_key]
+	})
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
