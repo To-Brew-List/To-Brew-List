@@ -2,11 +2,13 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 var path = require("path");
-var materialize = require("materialize-css");
+//var materialize = require("materialize-css");
 
 var app = express();
-var PORT = process.env.PORT || 3306;
+var PORT = process.env.PORT || 3003;
 
+//var PORT = process.env.PORT;
+console.log(PORT)
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
