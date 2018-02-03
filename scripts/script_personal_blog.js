@@ -8,11 +8,12 @@
 
 var all_posts = [
 	// {
+	//  title:"Appalachian Mountain Brewery",
 	// 	user_name:"Samwise Gamgee",
 	// 	post_location:"10002"
 	// 	location_id:"10003",
 	// 	main_text_field:"Loved it. I had the Belgian and my friend had one of the ciders. They've done a spot-on job with the decor. There's games, plenty of outdoor seating etc. Didn't have a chance to try the food but next I'm in the area I will be back for sure!",
-	// 	likes:[ "bob", "john", "ect."]
+	// 	likes:[ "bob", "john", "ect."],
 	// }
 
 ]
@@ -20,6 +21,7 @@ var all_posts = [
 // TODO -------------------------get all blogs from database and put them in all_blogs var
 var page_location_id = ""
 
+// NOTE ---------------- the next todo is not needed if we add a title to the posts
 // TODO -------------------------get the database of location_id/titles
 // {
 // 	10002:"Appalachian Mountain Brewery"
