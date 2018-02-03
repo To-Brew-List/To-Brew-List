@@ -22,4 +22,4 @@ router.get("/login", function(req, res) {
   res.sendFile(path.join(__dirname, "../views/layouts/login.html"));
 });
 
-module.exports = router;
+module.exports = routes;
