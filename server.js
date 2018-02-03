@@ -22,7 +22,7 @@ var mysql = require("mysql");
 // var blogRoutes = require("./controllers/blogController");
 // app.use("/blog", blogRoutes);
 
-var loginRoutes = require("./controllers/loginController.js");
+//var loginRoutes = require("./controllers/loginController.js");
 app.use("/login", loginRoutes);
 
 var routes = require("./controllers/userController.js");
