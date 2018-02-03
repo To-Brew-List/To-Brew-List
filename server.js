@@ -19,8 +19,8 @@ var mysql = require("mysql");
 
 // routes with server access
 
-var blogRoutes = require("./controllers/blogController");
-app.use("/blog", blogRoutes);
+// var blogRoutes = require("./controllers/blogController");
+// app.use("/blog", blogRoutes);
 
 var loginRoutes = require("./controllers/loginController.js");
 app.use("/login", loginRoutes);
