@@ -30,6 +30,9 @@ router.get("/register", function(req, res) {
   res.sendFile(path.join(__dirname, "../views/layouts/get-started.html"));
 });
 
+router.get("/login", function(req, res) {
+  res.sendFile(path.join(__dirname, "../views/layouts/login.html"));
+
 router.get("/blog", function(req, res) {
   res.sendFile(path.join(__dirname, "../views/layouts/personal.html"));
 });
