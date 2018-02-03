@@ -73,9 +73,23 @@
     </div>
 </div>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-<script type="text/javascript" src="/js/users.js"></script>
+<script type="text/javascript" src="/js/users.js"></script> -->
+<script type="text/javascript">
+    
+    $("#register").on("click", function () {
+    var  newUser = { 
+
+        fisrtName: $("#first_name").val().trim(),
+        lastName: $("#last_name").val().trim(),
+        email: $("#email").val().trim(),
+        password: $("#password").val().trim()
+    };
+});
+console.log(newUser);
+</script>
+<script type="text/javascript" src="/user.js"></script>
     
 </body>
 </html>

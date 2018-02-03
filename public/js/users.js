@@ -1,7 +1,4 @@
-
-function getUserName() {
-
-	var  newUser = {
+	var  newUser = { 
 
 		fisrtName: $("#first_name").val().trim(),
 		lastName: $("#last_name").val().trim(),
@@ -22,6 +19,3 @@ function getUserName() {
 	    );
 	});
 
-};
-
-module.exports = newUser;
